@@ -6,7 +6,7 @@
 /*   By: amezoe <amezoe@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/07 16:15:34 by amezoe            #+#    #+#             */
-/*   Updated: 2024/11/07 16:31:06 by amezoe           ###   ########.fr       */
+/*   Updated: 2024/11/09 15:00:21 by amezoe           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,23 +18,20 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	size_t	i;
 	size_t	j;
 
-	str = (char*)malloc(sizeof(*s) * (len + 1));
+	str = (char *) malloc(sizeof(*s) * (len + 1));
 	if (!str)
 		return (NULL);
-	
 	i = 0;
 	j = 0;
-
 	while (s[i])
 	{
-			if (i>= start && j < len)
+		if (i >= start && j < len)
 		{
 			str[j] = str[i];
 			j++;
 		}
 		i++;
 	}
-	
-	str[j] = 0;	
+	str[j] = 0;
 	return (str);
 }

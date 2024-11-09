@@ -6,7 +6,7 @@
 /*   By: amezoe <amezoe@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/05 09:43:44 by amezoe            #+#    #+#             */
-/*   Updated: 2024/11/05 09:54:52 by amezoe           ###   ########.fr       */
+/*   Updated: 2024/11/09 15:14:27 by amezoe           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,8 @@
 
 size_t	ft_strlcat(char *dst, const char *src, size_t size)
 {
-	size_t	length_of_dest;
-	size_t	length_total;
+	size_t		length_of_dest;
+	size_t		length_total;
 	const char	*s;
 
 	if ((!dst || !src) && !size)
@@ -28,5 +28,4 @@ size_t	ft_strlcat(char *dst, const char *src, size_t size)
 		length_total = length_of_dest + ft_strlen(s);
 	else
 		return (size + ft_strlen(s));
-		
 }
