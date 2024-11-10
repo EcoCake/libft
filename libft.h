@@ -6,7 +6,7 @@
 /*   By: amezoe <amezoe@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/04 13:31:01 by amezoe            #+#    #+#             */
-/*   Updated: 2024/11/09 15:49:57 by amezoe           ###   ########.fr       */
+/*   Updated: 2024/11/10 17:46:34 by amezoe           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,7 @@
 #include <string.h>
 #include <unistd.h>
 #include <stdlib.h>
+#include <stdio.h>
 
 
 int	ft_isalnum(int c);
@@ -42,6 +43,7 @@ char *ft_strnstr(const char *big, const char *little, size_t n);
 int ft_atoi(const char *nptr);
 void	*ft_calloc(size_t nmemb, size_t size);
 char	*strdup(const char *s);
+char *ft_strtrim(char const *s1, char const *set);
 
 
 #endif

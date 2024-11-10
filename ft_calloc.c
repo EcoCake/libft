@@ -6,7 +6,7 @@
 /*   By: amezoe <amezoe@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/09 15:47:22 by amezoe            #+#    #+#             */
-/*   Updated: 2024/11/09 15:48:39 by amezoe           ###   ########.fr       */
+/*   Updated: 2024/11/10 16:57:12 by amezoe           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,5 +14,11 @@
 
 void	*ft_calloc(size_t nmemb, size_t size)
 {
+	void *ret;
 	
+	ret = malloc(size * nmemb);
+	if (!ret)
+		return (NULL);
+	ft_bzero(ret, size * nmemb);
+	return (ret);
 }
