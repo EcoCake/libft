@@ -6,7 +6,7 @@
 /*   By: amezoe <amezoe@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/04 13:31:01 by amezoe            #+#    #+#             */
-/*   Updated: 2024/11/10 17:46:34 by amezoe           ###   ########.fr       */
+/*   Updated: 2024/11/12 12:19:41 by amezoe           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,6 +44,7 @@ int ft_atoi(const char *nptr);
 void	*ft_calloc(size_t nmemb, size_t size);
 char	*strdup(const char *s);
 char *ft_strtrim(char const *s1, char const *set);
+char	*ft_itoa(int n);
 
 
 #endif
