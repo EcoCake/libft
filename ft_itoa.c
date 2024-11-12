@@ -6,31 +6,56 @@
 /*   By: amezoe <amezoe@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/10 17:50:27 by amezoe            #+#    #+#             */
-/*   Updated: 2024/11/12 15:47:04 by amezoe           ###   ########.fr       */
+/*   Updated: 2024/11/12 16:27:34 by amezoe           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static int	ft_count(long int i)
+size_t	ft_numb_len(int numb)
 {
-	int count;
-	count = 0;
-	if (i < 0)
+	int len;
+
+	len = 0;
+	if (numb <= 0)
+		len++;
+	while (numb)
 	{
-		i *= -1;
-		count++;
+		len++;
+		numb = numb / 10;
 	}
-	while (i > 0)
-	{
-		i /= 10;
-		count++;
-	}
-	return (count);
+	return (len);
 }
 
 char	*ft_itoa(int n)
 {
+	int len;
+	char *str;
+	long numb;
 
-
+	len = ft_numb_len(n);
+	numb = n;
+	if (!(str = malloc(sizeof(char) * len + 1)))
+		return(NULL);
+	if (numb < 0)
+		{
+			str[0] = '-';
+			numb = -numb;
+		}
+	if (numb == 0)
+		str[0] = '0';
+	str[len--] = '\0';
+	while (numb)
+	{
+		str[len] = numb % 10 + '0';
+		len--;
+		numb = numb / 10;
+	}
+	return (str);
+}
+int main()
+{
+	printf("%s\n", ft_itoa(0-0));
+	printf("%s\n", ft_itoa(987654321));
+	printf("%s\n", ft_itoa(-123456789));
 }
