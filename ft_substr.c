@@ -6,7 +6,7 @@
 /*   By: amezoe <amezoe@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/07 16:15:34 by amezoe            #+#    #+#             */
-/*   Updated: 2024/11/09 15:00:21 by amezoe           ###   ########.fr       */
+/*   Updated: 2024/11/15 16:08:17 by amezoe           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	{
 		if (i >= start && j < len)
 		{
-			str[j] = str[i];
+			str[j] = s[i];
 			j++;
 		}
 		i++;
