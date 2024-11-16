@@ -6,7 +6,7 @@
 /*   By: amezoe <amezoe@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/04 13:48:13 by amezoe            #+#    #+#             */
-/*   Updated: 2024/11/04 16:22:28 by amezoe           ###   ########.fr       */
+/*   Updated: 2024/11/16 18:34:36 by amezoe           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,3 +19,22 @@ int	ft_isalpha(int c)
 	else
 		return (0);
 }
+
+// int main(void)
+// {
+
+	
+// 	char	test_cases[] = {'A', 'g', '1', '0', '9', '!', ' ', '\n'};
+// 	int		num_cases = sizeof(test_cases) / sizeof(test_cases[0]);
+
+// 	printf("ft_isalpha:\n");
+// 	for (int i = 0; i < num_cases; i++)
+// 	{
+// 		char c = test_cases[i];
+// 		int result = ft_isalpha(c);
+
+// 		printf("'%c' ascii value %d | ft_isalpha: %d\n",c, c, result);
+// 	}
+
+// 	return (0);
+// }

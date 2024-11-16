@@ -6,7 +6,7 @@
 /*   By: amezoe <amezoe@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/10 17:50:27 by amezoe            #+#    #+#             */
-/*   Updated: 2024/11/12 16:27:34 by amezoe           ###   ########.fr       */
+/*   Updated: 2024/11/16 18:37:33 by amezoe           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,9 +53,10 @@ char	*ft_itoa(int n)
 	}
 	return (str);
 }
-int main()
-{
-	printf("%s\n", ft_itoa(0-0));
-	printf("%s\n", ft_itoa(987654321));
-	printf("%s\n", ft_itoa(-123456789));
-}
+
+// int main()
+// {
+// 	printf("%s\n", ft_itoa(0-0));
+// 	printf("%s\n", ft_itoa(987654321));
+// 	printf("%s\n", ft_itoa(-123456789));
+// }

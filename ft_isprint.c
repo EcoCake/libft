@@ -6,7 +6,7 @@
 /*   By: amezoe <amezoe@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/04 15:19:33 by amezoe            #+#    #+#             */
-/*   Updated: 2024/11/04 16:22:39 by amezoe           ###   ########.fr       */
+/*   Updated: 2024/11/16 18:37:02 by amezoe           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,3 +19,22 @@ int	ft_isprint(int c)
 	else
 		return (0);
 }
+
+// int main(void)
+// {
+
+	
+// 	char	test_cases[] = {'A', 'g', '1', '0', '9', '!', ' ', '\n'};
+// 	int		num_cases = sizeof(test_cases) / sizeof(test_cases[0]);
+
+// 	printf("ft_isprint:\n");
+// 	for (int i = 0; i < num_cases; i++)
+// 	{
+// 		char c = test_cases[i];
+// 		int result = ft_isprint(c);
+
+// 		printf("'%c' ascii value %d | ft_isprint: %d\n",c, c, result);
+// 	}
+
+// 	return (0);
+// }

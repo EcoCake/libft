@@ -6,7 +6,7 @@
 /*   By: amezoe <amezoe@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/04 15:14:48 by amezoe            #+#    #+#             */
-/*   Updated: 2024/11/04 16:22:32 by amezoe           ###   ########.fr       */
+/*   Updated: 2024/11/16 18:35:23 by amezoe           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,3 +19,22 @@ int	ft_isascii(int c)
 	else
 		return (0);
 }
+
+// int main(void)
+// {
+
+	
+// 	char	test_cases[] = {'A', 'g', '1', '0', '9', '!', ' ', '\n'};
+// 	int		num_cases = sizeof(test_cases) / sizeof(test_cases[0]);
+
+// 	printf("ft_isascii:\n");
+// 	for (int i = 0; i < num_cases; i++)
+// 	{
+// 		char c = test_cases[i];
+// 		int result = ft_isascii(c);
+
+// 		printf("'%c' ascii value %d | ft_isascii: %d\n",c, c, result);
+// 	}
+
+// 	return (0);
+// }
