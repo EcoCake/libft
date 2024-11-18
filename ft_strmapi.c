@@ -6,21 +6,21 @@
 /*   By: amezoe <amezoe@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/12 16:34:51 by amezoe            #+#    #+#             */
-/*   Updated: 2024/11/12 17:07:30 by amezoe           ###   ########.fr       */
+/*   Updated: 2024/11/18 17:54:42 by amezoe           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	ft_strlen(const char *s)
-{
-	size_t	i;
+// size_t	ft_strlen(const char *s)
+// {
+// 	size_t	i;
 
-	i = 0;
-	while (s[i])
-		i++;
-	return (i);
-}
+// 	i = 0;
+// 	while (s[i])
+// 		i++;
+// 	return (i);
+// }
 
 char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 {
@@ -43,28 +43,28 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 }
 
 
-int	ft_toupper(int c)
-{
-	if (c >= 97 && c <= 122)
-		c -= 32;
-	return (c);
-}
+// int	ft_toupper(int c)
+// {
+// 	if (c >= 97 && c <= 122)
+// 		c -= 32;
+// 	return (c);
+// }
 
-int main()
-{
-	char *s = "i wanna die";
-	char *result;
+// int main()
+// {
+// 	char *s = "i wanna die";
+// 	char *result;
 
-	result = ft_strmapi(s, ft_toupper(s));
-	if (result)
-	{
-		printf("%s", s);
-		printf("%s", result);
-		free (result);
-	}
-	else 
-	{
-		printf("Malloc fail");
-	}
-	return (0);
-}
+// 	result = ft_strmapi(s, ft_toupper(s));
+// 	if (result)
+// 	{
+// 		printf("%s", s);
+// 		printf("%s", result);
+// 		free (result);
+// 	}
+// 	else 
+// 	{
+// 		printf("Malloc fail");
+// 	}
+// 	return (0);
+// }

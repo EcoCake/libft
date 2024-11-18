@@ -6,26 +6,26 @@
 /*   By: amezoe <amezoe@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/10 17:50:27 by amezoe            #+#    #+#             */
-/*   Updated: 2024/11/16 18:37:33 by amezoe           ###   ########.fr       */
+/*   Updated: 2024/11/18 17:56:20 by amezoe           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	ft_numb_len(int numb)
-{
-	int len;
+// size_t	ft_numb_len(int numb)
+// {
+// 	int len;
 
-	len = 0;
-	if (numb <= 0)
-		len++;
-	while (numb)
-	{
-		len++;
-		numb = numb / 10;
-	}
-	return (len);
-}
+// 	len = 0;
+// 	if (numb <= 0)
+// 		len++;
+// 	while (numb)
+// 	{
+// 		len++;
+// 		numb = numb / 10;
+// 	}
+// 	return (len);
+// }
 
 char	*ft_itoa(int n)
 {
