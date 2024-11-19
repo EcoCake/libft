@@ -6,7 +6,7 @@
 /*   By: amezoe <amezoe@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/05 09:40:46 by amezoe            #+#    #+#             */
-/*   Updated: 2024/11/16 18:23:14 by amezoe           ###   ########.fr       */
+/*   Updated: 2024/11/19 14:33:27 by amezoe           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,13 +28,12 @@ void	ft_bzero(void *s, size_t n)
 // int main(void)
 // {
 // 	char	buffer1[10] = "asdfghjkl";
-	
 // 	printf("buffer1 before func %s\n", buffer1);
-
 // 	ft_bzero(buffer1 + 2, 3);
-// 	buffer1[9] = '\0'; 	// hafta nullterm manually cuz i cant be arsed to fix it and 
-// 						// it breaks otherwise and idk why
-	
+// 	buffer1[9] = '\0'; 	
+// hafta nullterm manually cuz i cant be arsed to fix it and 
+// 						
+// it breaks otherwise and idk why
 // 	printf("After ft_bzero (buffer1): ");
 // 	for (int i = 0; i < 10; i++)
 // 	{

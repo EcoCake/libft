@@ -6,7 +6,7 @@
 /*   By: amezoe <amezoe@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/05 09:43:44 by amezoe            #+#    #+#             */
-/*   Updated: 2024/11/09 15:14:27 by amezoe           ###   ########.fr       */
+/*   Updated: 2024/11/19 15:05:23 by amezoe           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,18 +14,21 @@
 
 size_t	ft_strlcat(char *dst, const char *src, size_t size)
 {
-	size_t		length_of_dest;
-	size_t		length_total;
-	const char	*s;
+	size_t		src_len;
+	size_t		dst_len;
 
-	if ((!dst || !src) && !size)
-		return (0);
-	s = src;
-	length_of_dest = 0;
-	while (*(dst + length_of_dest) && length_of_dest < size)
-		length_of_dest++;
-	if (length_of_dest < size)
-		length_total = length_of_dest + ft_strlen(s);
+	src_len = ft_strlen(src);
+	dst_len = ft_strlen(dst);
+	if (dst_len >= size)
+		dst_len = size;
+	if (dst_len == size)
+		return (size + src_len);
+	if (src_len < size - dst_len)
+		ft_memcpy (dst + dst_len, src, src_len + 1);
 	else
-		return (size + ft_strlen(s));
+	{
+		ft_memcpy(dst + dst_len, src, size - dst_len - 1);
+		dst[size - 1] = '\0';
+	}
+	return (dst_len + src_len);
 }

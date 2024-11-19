@@ -6,7 +6,7 @@
 /*   By: amezoe <amezoe@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/12 16:34:51 by amezoe            #+#    #+#             */
-/*   Updated: 2024/11/18 17:54:42 by amezoe           ###   ########.fr       */
+/*   Updated: 2024/11/19 14:21:15 by amezoe           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,16 +24,14 @@
 
 char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 {
-	char *string;
-	unsigned int i;
+	char			*string;
+	unsigned int	i;
 
 	string = (char *)malloc(sizeof(char) * (ft_strlen(s) + 1));
-
 	if (!string)
-		return(NULL);
-
+		return (NULL);
 	i = 0;
-	while(s[i])
+	while (s[i])
 	{
 		string[i] = f(i, s[i]);
 		i++;
@@ -41,7 +39,6 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 	string[i] = '\0';
 	return (string);
 }
-
 
 // int	ft_toupper(int c)
 // {
