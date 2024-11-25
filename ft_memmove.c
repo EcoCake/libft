@@ -38,3 +38,21 @@ void	*ft_memmove(void *dest, const void *src, size_t n)
 	}
 	return (dest);
 }
+// int main(void)
+// {
+
+// 		char src[] = "I hope this works";
+// 		char dest[20];
+
+// 		ft_memmove(dest, src, 13);
+
+// 		printf("no overlaps %s\n", dest);
+
+// //================================================================================
+	
+// 		char str[] = "Please just work ill cry";
+
+// 		ft_memmove(str + 6, str, 5);
+
+// 		printf("src to dest overlapping %s\n", str);
+// 	}
