@@ -6,7 +6,7 @@
 /*   By: amezoe <amezoe@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/24 15:00:23 by amezoe            #+#    #+#             */
-/*   Updated: 2024/11/24 16:47:50 by amezoe           ###   ########.fr       */
+/*   Updated: 2024/11/25 19:54:37 by amezoe           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,35 +14,40 @@
 
 int	countwords(const char *str, char c)
 {
-	int	i;
 	int	count;
+	int	in_word;
+	int	i;
 
+	in_word = 0;
 	i = 0;
 	count = 0;
 	while (str[i])
 	{
-		if (str[i] != c)
-			i++;
-		else if (str[i] == c || str[i] == '\0')
+		if (str[i] != c && in_word == 0)
 		{
+			in_word = 1;
 			count++;
-			i++;
 		}
+		else if (str[i] == c)
+			in_word = 0;
+		i++;
 	}
 	return (count);
 }
 
-char	*cpystr(char *tab, const char *s, int *j, int i)
+char	*cpystr(char *tab, const char *s, int j, int i)
 {
 	int	k;
 
 	k = 0;
-	while (*j < i)
+	while (j < i)
 	{
-		tab[k] = s[*j];
-		*j = *j + 1;
+		tab[k] = s[j];
 		k++;
+		j = j + 1;
 	}
+	if (i == (int)ft_strlen(s) - 1)
+		tab[k++] = s[i];
 	tab[k] = '\0';
 	return (tab);
 }
@@ -58,43 +63,46 @@ char	**assign_strings(char **tab, const char *s, char c)
 	mover = 0;
 	while (s[i])
 	{
-		if (s[i] == c || s[i] == '\0')
+		if (s[i] != c)
 		{
-			tab[mover] = malloc(sizeof(char) * (i - j) + 1);
+			j = i;
+			while (s[i] && s[i] != c)
+				i++;
+			tab[mover] = malloc(sizeof(char *) * (i - j + 1));
 			if (!tab[mover])
 				return (NULL);
-			if (s[j] == c)
-				j++;
-			tab[mover] = cpystr(tab[mover], s, &j, i);
+			tab[mover] = cpystr(tab[mover], s, j, i);
 			mover++;
 		}
-		i++;
+		else
+			i++;
 	}
 	tab[mover] = NULL;
 	return (tab);
 }
 
-char	**ft_split(char const *s, char c)
+char	**ft_split(const char *s, char c)
 {
 	char	**tab;
 
-	tab = malloc(sizeof(char *) * countwords(s, c) + 1);
+	tab = malloc(sizeof(char **) * (countwords(s, c) + 1));
 	if (!tab)
 		return (NULL);
 	return (assign_strings(tab, s, c));
 }
 
-int main(void)
-{
- char  **tab;
- int  i;
+// int	main(void)
+// {
+// 	int		i;
+// 	char	**tab;
 
- tab = ft_split("yeet,dasd ,hsdf adadadada, ", ',');
- i = 0;
- while (tab[i])
- {
-  printf("%s\n", tab[i]);
-  i++;
- }
- return (0);
-}
+// 	i = 0;
+// 	tab = ft_split(",,  He, llo  , , ,        Wo,,,,, rld", ',');
+// 	while (tab[i])
+// 	{
+// 		printf("%s\n", tab[i]);
+// 		free(tab[i]);
+// 		i++;
+// 	}
+// 	free(tab);
+//  }

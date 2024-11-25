@@ -6,7 +6,7 @@
 /*   By: amezoe <amezoe@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/10 17:04:24 by amezoe            #+#    #+#             */
-/*   Updated: 2024/11/19 15:08:36 by amezoe           ###   ########.fr       */
+/*   Updated: 2024/11/25 20:12:24 by amezoe           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -81,6 +81,6 @@ char	*ft_strtrim(char const *s1, char const *set)
 // {
 // char *s1 = "abcdef234456abcd";
 // char *set = "abcdef";
-// printf("%s", ft_strtrim(s1, set));
+// printf("%s", ft_strtrim("abcd", ""));
 // return (0);
 // }
