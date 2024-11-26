@@ -6,7 +6,7 @@
 /*   By: amezoe <amezoe@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/08 15:43:28 by amezoe            #+#    #+#             */
-/*   Updated: 2024/11/09 15:01:29 by amezoe           ###   ########.fr       */
+/*   Updated: 2024/11/26 16:47:04 by amezoe           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,3 +27,11 @@ char	*ft_strrchr(const char*s, int c)
 	}
 	return (0);
 }
+// int main(void)
+// {
+//     printf("Hello, World!, 'o' = \"%s\"\n", ft_strrchr("Hello, World!", 'o'));
+//     printf("abcdabcd, 'c' = \"%s\"\n", ft_strrchr("abcdabcd", 'c'));
+//     printf("'a' \"%s\"\n", ft_strrchr("", 'a'));
+//     printf("abcdabcd, '\\0' = \"%s\"\n", ft_strrchr("abcdabcd", '\0'));
+//     return 0;
+// }

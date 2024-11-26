@@ -6,7 +6,7 @@
 /*   By: amezoe <amezoe@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/08 15:48:56 by amezoe            #+#    #+#             */
-/*   Updated: 2024/11/09 15:03:36 by amezoe           ###   ########.fr       */
+/*   Updated: 2024/11/26 16:57:52 by amezoe           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,3 +27,8 @@ int	ft_strncmp(const char *s1, const char *s2, size_t n)
 	}
 	return (0);
 }
+// int main(void)
+// {
+
+	
+// }
