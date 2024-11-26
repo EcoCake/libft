@@ -6,7 +6,7 @@
 /*   By: amezoe <amezoe@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/09 15:47:22 by amezoe            #+#    #+#             */
-/*   Updated: 2024/11/19 14:26:01 by amezoe           ###   ########.fr       */
+/*   Updated: 2024/11/26 15:15:51 by amezoe           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ void	*ft_calloc(size_t nmemb, size_t size)
 	ft_bzero(ret, size * nmemb);
 	return (ret);
 }
-//=========================================================================================//
+//======================//
 // void ft_bzero(void *s, size_t n) {
 // 	char *str = (char *)s;
 // 	while (n > 0) {
@@ -31,19 +31,15 @@ void	*ft_calloc(size_t nmemb, size_t size)
 // 		n--;
 // 	}
 // }
-
 // int main(void)
 // {
 // 	size_t nmemb = 5;
 // 	size_t size = sizeof(int);
-
 // 	int *arr = (int *)ft_calloc(nmemb, size);
-
 // 	if (arr == NULL) {
 // 		printf("malloc fail\n");
 // 		return 1;
 // 	}
-
 // 	size_t i = 0;
 // 	while (i < nmemb) {
 // 		if (arr[i] != 0) {
@@ -53,9 +49,7 @@ void	*ft_calloc(size_t nmemb, size_t size)
 // 		}
 // 		i++;
 // 	}
-
 // 	printf("memory allocated and initialized to 0.\n");
 // 	free(arr);
-
 // 	return 0;
 // }

@@ -6,7 +6,7 @@
 /*   By: amezoe <amezoe@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/24 15:00:23 by amezoe            #+#    #+#             */
-/*   Updated: 2024/11/25 19:54:37 by amezoe           ###   ########.fr       */
+/*   Updated: 2024/11/26 16:26:45 by amezoe           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,9 +18,9 @@ int	countwords(const char *str, char c)
 	int	in_word;
 	int	i;
 
+	count = 0;
 	in_word = 0;
 	i = 0;
-	count = 0;
 	while (str[i])
 	{
 		if (str[i] != c && in_word == 0)
@@ -35,57 +35,76 @@ int	countwords(const char *str, char c)
 	return (count);
 }
 
-char	*cpystr(char *tab, const char *s, int j, int i)
+char	*cpystr(const char *s, int start, int end)
 {
-	int	k;
+	char	*tab;
+	int		i;
+	int		j;
 
-	k = 0;
-	while (j < i)
+	tab = malloc((end - start + 1) * sizeof(char));
+	if (!tab)
+		return (NULL);
+	i = start;
+	j = 0;
+	while (i < end)
 	{
-		tab[k] = s[j];
-		k++;
-		j = j + 1;
+		tab[j] = s[i];
+		j++;
+		i++;
 	}
-	if (i == (int)ft_strlen(s) - 1)
-		tab[k++] = s[i];
-	tab[k] = '\0';
+	tab[j] = '\0';
 	return (tab);
+}
+
+void	free_tab(char **tab, int count)
+{
+	int	i;
+
+	i = 0;
+	while (i < count)
+	{
+		free(tab[i]);
+		i++;
+	}
+	free(tab);
 }
 
 char	**assign_strings(char **tab, const char *s, char c)
 {
 	int	i;
-	int	j;
-	int	mover;
+	int	start;
+	int	index;
 
 	i = 0;
-	j = 0;
-	mover = 0;
+	index = 0;
 	while (s[i])
 	{
 		if (s[i] != c)
 		{
-			j = i;
+			start = i;
 			while (s[i] && s[i] != c)
 				i++;
-			tab[mover] = malloc(sizeof(char *) * (i - j + 1));
-			if (!tab[mover])
-				return (NULL);
-			tab[mover] = cpystr(tab[mover], s, j, i);
-			mover++;
+			tab[index] = cpystr(s, start, i);
+			if (!tab[index])
+				return (free_tab(tab, index), NULL);
+			index++;
 		}
 		else
 			i++;
 	}
-	tab[mover] = NULL;
+	tab[index] = NULL;
 	return (tab);
 }
 
 char	**ft_split(const char *s, char c)
 {
 	char	**tab;
+	int		words;
 
-	tab = malloc(sizeof(char **) * (countwords(s, c) + 1));
+	if (!s)
+		return (NULL);
+	words = countwords(s, c);
+	tab = malloc((words + 1) * sizeof(char *));
 	if (!tab)
 		return (NULL);
 	return (assign_strings(tab, s, c));
@@ -97,7 +116,7 @@ char	**ft_split(const char *s, char c)
 // 	char	**tab;
 
 // 	i = 0;
-// 	tab = ft_split(",,  He, llo  , , ,        Wo,,,,, rld", ',');
+// 	tab = ft_split("  He llo            Wo rld", ' ');
 // 	while (tab[i])
 // 	{
 // 		printf("%s\n", tab[i]);
@@ -105,4 +124,4 @@ char	**ft_split(const char *s, char c)
 // 		i++;
 // 	}
 // 	free(tab);
-//  }
+// }
