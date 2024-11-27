@@ -6,7 +6,7 @@
 /*   By: amezoe <amezoe@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/07 16:31:47 by amezoe            #+#    #+#             */
-/*   Updated: 2024/11/19 14:28:11 by amezoe           ###   ########.fr       */
+/*   Updated: 2024/11/27 12:56:09 by amezoe           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,3 +28,21 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	}
 	return (str);
 }
+// int	main(void)
+// {
+// 	const char *s1 = "Hello";
+// 	const char *s2 = " World!";
+// 	const char *s3 = "";
+// 	const char *s4 = "42";
+// 	const char *s5 = NULL;
+// 	char *result = ft_strjoin(s1, s2);
+// 	printf("Test 1: '%s' + '%s' = '%s' ('Hello World!')\n", s1, s2, result);
+// 	free(result);
+// 	result = ft_strjoin(s1, s3);
+// 	printf("Test 2: '%s' + '%s' = '%s' ('Hello')\n", s1, s3, result);
+// 	free(result);
+// 	result = ft_strjoin(s3, s2);
+// 	printf("Test 3: '%s' + '%s' = '%s' (' World!')\n", s3, s2, result);
+// 	free(result);
+// 	return(0);
+// }
